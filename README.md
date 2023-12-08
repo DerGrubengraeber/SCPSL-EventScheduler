@@ -3,7 +3,7 @@ An EXILED based Plugin for SCP:SL using CedMod.
 
 # Installation:
 Download the .dll and place it in the EXILED plugins folder.
-needs Cedmod installed.
+Needs Cedmod installed.
 
 
 # Note:
