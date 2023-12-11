@@ -18,6 +18,7 @@ namespace EventScheduler
         private int spacerRounds = config.RoundsBetween-1;
         private int eventMenge; //no i will not change the name of this :P
         private int eventsCurrent = 0;
+        private IEvent lastEvent;
         Random rnd = new Random();
         public EventHandler()
         {
@@ -47,12 +48,24 @@ namespace EventScheduler
                     }
                     else 
                     {
-                        Log.Info("Event Menge ist " + eventMenge);
                         int rndN = rnd.Next(0, eventMenge);
-                        Log.Info("Random Number is " + rndN);
-                        IEvent nextEvent = EventManager.AvailableEvents[rndN];
-                        Server.ExecuteCommand("/Events enable " + nextEvent.EventPrefix + " false");
-                        Log.Info("Next Event is " + nextEvent.EventName);
+                        if (config.TwoInARow)
+                        {
+
+                            IEvent nextEvent = EventManager.AvailableEvents[rndN];
+                            while(nextEvent.EventName == lastEvent.EventName)
+                            {
+                                nextEvent = EventManager.AvailableEvents[rndN];
+                            }
+                            Server.ExecuteCommand("/Events enable " + nextEvent.EventPrefix + " false");
+                            lastEvent = nextEvent;
+                        }
+                        else
+                        {
+                            IEvent nextEvent = EventManager.AvailableEvents[rndN];
+                            Server.ExecuteCommand("/Events enable " + nextEvent.EventPrefix + " false");
+                           
+                        }
                     }
                 }
                 }
