@@ -14,7 +14,7 @@ namespace EventScheduler
         [Description("Set to true to make the scheduler choose the next event randomly. Default False")]
         public bool Randomize { get; set; } = false;
 
-        [Description("Set to true to allow the same event to happen twice in a row (only applies when Randomize is enabled). Default true. DO NOT ENABLE THIS WHEN YOU HAVE ONLY ONE EVENT INSTALLED!!")]
+        [Description("Set to true to allow the same event to happen twice in a row (only applies when Randomize is enabled). Default true. Do not set to false when only one event is installed. ")]
         public bool TwoInARow { get; set; } = true;
 
         [Description("The minimum amount of players on the Server to enable Events. Default 1")]
