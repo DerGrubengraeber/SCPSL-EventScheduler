@@ -90,7 +90,7 @@ namespace EventScheduler
                         if (!config.TwoInARow) 
                         {
                             IEvent nextEvent = AEvents[rndN];
-                            while (nextEvent.EventName == lastEvent.EventName)
+                            while (nextEvent.Equals(lastEvent))
                             {
                                 nextEvent = AEvents[rndN];
                             }
@@ -108,8 +108,7 @@ namespace EventScheduler
                 }
                 }
                 else if(EventManager.CurrentEvent == null)
-                {        
-                
+                {                
                     roundsPassed++;
                 }
         }
