@@ -16,7 +16,7 @@ The Config is currently still in the default EXILED config file (~/.config/EXILE
 - Add Event Prefixes to the "ExclusiveEvents" List to specify the exclusive Events.
 
 # Future Plans
-- An option to only enable specific events when for a specific player count.
+- An option to assign each event a minimum player count seperately.
 - An option to give an event a "chance / weight" to be selected by the randomize option.
 - An option to select a "cooldown" for each event so you can specify how many other events should be in between the same event wehn the randomize option is enabled.
 - A NWAPI version.
