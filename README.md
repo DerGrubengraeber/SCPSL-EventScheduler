@@ -1,10 +1,16 @@
 # SCPSL-EventScheduler
-An EXILED based Plugin for SCP:SL using CedMod.
+A Plugin for SCP:SL using CedMod.
+
+There is both a NWAPI and EXILED version, but i recommend using the EXILED version.
 
 # Installation:
+## EXILED
 Download the .dll and place it in the EXILED plugins folder (~/.config/EXILED/Plugins).
 Needs Cedmod installed.
 
+## NWAPI
+Download the NWAPI .dll and place it in the NWAPI plugins folder (~/.config/SCP Secret Laboratory/PluginAPI/Plugins).
+Needs Cedmod installed.
 
 # Configuration 
 The Config is currently still in the default EXILED config file (~/.config/EXILED/Configs/"portnumber"-config.yml).
@@ -19,4 +25,4 @@ The Config is currently still in the default EXILED config file (~/.config/EXILE
 - An option to assign each event a minimum player count seperately.
 - An option to give an event a "chance / weight" to be selected by the randomize option.
 - An option to select a "cooldown" for each event so you can specify how many other events should be in between the same event wehn the randomize option is enabled.
-- A NWAPI version.
+- Make the NWAPI version more usable.
