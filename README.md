@@ -1,10 +1,16 @@
 # SCPSL-EventScheduler
-An EXILED based Plugin for SCP:SL using CedMod.
+A Plugin for SCP:SL using CedMod.
+
+There is both a NWAPI and EXILED version, but i recommend using the EXILED version.
 
 # Installation:
+## EXILED
 Download the .dll and place it in the EXILED plugins folder (~/.config/EXILED/Plugins).
 Needs Cedmod installed.
 
+## NWAPI
+Download the NWAPI .dll and place it in the NWAPI plugins folder (~/.config/SCP Secret Laboratory/PluginAPI/Plugins).
+Needs Cedmod installed.
 
 # Configuration 
 The Config is currently still in the default EXILED config file (~/.config/EXILED/Configs/"portnumber"-config.yml).
