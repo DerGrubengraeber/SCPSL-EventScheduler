@@ -7,9 +7,6 @@ using Exiled.API.Features;
 using Exiled.API.Enums;
 using CedMod;
 
-
-
-
 namespace EventScheduler
 {
     public class EventScheduler : Plugin<Config>
@@ -26,11 +23,10 @@ namespace EventScheduler
             eventHandler = new EventHandler();
             base.OnEnabled();
         }
-        public override void OnDisabled() //TODO
+        public override void OnDisabled() 
         {
-            //eventHandler = null!;
-
-            //Instance = null!;
+            eventHandler = null;
+            Instance = null;
             base.OnDisabled();
         }
 
