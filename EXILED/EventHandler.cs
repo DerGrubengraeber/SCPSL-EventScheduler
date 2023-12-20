@@ -8,7 +8,6 @@ using CedMod.Commands;
 using CedMod.Addons.Events.Interfaces;
 using Exiled.API.Features;
 
-
 namespace EventScheduler
 {
     class EventHandler
@@ -48,25 +47,8 @@ namespace EventScheduler
 
         public void PlayerWaiting()
         {
-            if (!config.EnableExclusiveEvents)
-            {
-                AEvents = new List<IEvent>(EventManager.AvailableEvents);
-            }
-            else
-            {
-                AEvents = new List<IEvent>();
-                foreach (string prefix in config.ExclusiveEvents)
-                {
-                   if(Utility.PrefixMatcher(prefix) != null)
-                    {                      
-                        AEvents.Add(Utility.PrefixMatcher(prefix));
-                    } 
-                    else
-                    {
-                        Log.Error("ERROR no event with the Prefix " + prefix + " Please resolve this issue to avoid issues with the event scheduling");
-                    }
-                }
-            }
+
+            AEvents = Utility.EventListBuilder();           
             eventMenge = AEvents.Count;
             if (roundsPassed >= spacerRounds) 
                 {
