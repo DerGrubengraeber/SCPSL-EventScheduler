@@ -23,5 +23,9 @@ namespace EventScheduler
         public bool EnableExclusiveEvents { get; set; } = false;
         [Description("Enter the Prefixes of the events that should be run, leave empty if you want to run all installed events. Default empty.")]
         public List<string> ExclusiveEvents { get; set; } = new List<string>();
+        [Description("Set to true to enable the Blacklist, events on the Blacklist will not be run. Default False.")]
+        public bool EnableBlacklist { get; set; } = false;
+        [Description("Enter the Prefixes of the events that should not run. Default empty.")]
+        public List<string> Blacklist { get; set; } = new List<string>();
     }
 }
